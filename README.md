@@ -62,5 +62,25 @@ queryPhen$where[[6]]<-newConstraint ## added constraint to query, used 6 which w
 resPhen<-runQuery(im,queryPhen) ## runs query
 ```
 
+Now constraints have been added, additional information available in MGI might be desired and can be included in the query
+to be requested. Below, supporting evidence is requested by way of publications. Below, the previous query is inherited
+whilst requesting (selecting) new information. get select is used which return the data to be retrieved.
 
+
+```R
+model<- getModel(im) # Retrieve base model (mousemine)
+
+## Adding publication data to the query for it to be returned
+queryPhen.IntermineR = setQuery(
+  inheritQuery = queryPhen,
+  select = c(queryPhen$select,
+             "OntologyAnnotation.evidence.publications.year",
+             "OntologyAnnotation.evidence.publications.citation")
+)
+
+### running the line below shows the columns to be returned from a query
+getSelect(queryPhen.IntermineR) ## to check the newly created and added columns
+
+res.queryPhenIntermineR <-runQuery(im, queryPhen.IntermineR) ### run query with new requests included
+```
 

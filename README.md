@@ -12,6 +12,11 @@ Mouse mine will be selected here
 ```R
 im<-initInterMine(mine = listMines()["MouseMine"])
 ```
+
+Get template. Use mousemine if looking for mammalian phenotypes becuae they are candidate animals
+```R
+template=getTemplates(im)
+```
 Various queries can be prepared, below phenotype_genotype is being used.
 ```R
 queryPhen = getTemplateQuery(

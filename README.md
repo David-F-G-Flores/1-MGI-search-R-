@@ -8,7 +8,7 @@ Load intermine and list mines.
 library(InterMineR)
 listMines()
 ```
-Mpuse mine will be selected here
+Mouse mine will be selected here
 ```R
 im<-initInterMine(mine = listMines()["MouseMine"])
 ```

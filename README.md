@@ -8,12 +8,12 @@ Load intermine and list mines.
 library(InterMineR)
 listMines()
 ```
-Mouse mine will be selected here
+Mouse mine will be selected here. Alternative model organisms can be selected, listMines().
 ```R
 im<-initInterMine(mine = listMines()["MouseMine"])
 ```
 
-Get template. Use mousemine if looking for mammalian phenotypes becuae they are candidate animals.
+Get template. Use mousemine if looking for mammalian phenotypes because they are candidate animals.
 Also views the mammalian templates
 ```R
 template=getTemplates(im)

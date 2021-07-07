@@ -73,6 +73,6 @@ queryPhen.IntermineR = setQuery(
 ### running the line below shows the columns to be returned from a query
 getSelect(queryPhen.IntermineR) ## to check the newly created and added columns
 
-res.queryPhenIntermineR <-runQuery(im, queryPhen.IntermineR) ### run query with new requests included
+mousegenes <-runQuery(im, queryPhen.IntermineR) ### run query with new requests included
 ```
 

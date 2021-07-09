@@ -31,19 +31,19 @@ To actually run the prepared query.
 resPhen<-runQuery(im,queryPhen) ## runs query
 ```
 To add a constraint to my prepared query, arguments will be passed to setConstraints index 5.
-resPhen from above has a default constraint in index 5, "*circulating glucose*", which can be verified by calling queryPhen$where[5] and to confirm this is the last filled index, queryPhen$where[6] can be called to confirm this. We are not concerned about "*circulating glucose*"  therefore this will be overwritten by 'Perinatal lethality', the phenotype of interest. This can be verified by inspecting queryPhen$where[5].
+resPhen from above has a default constraint in index 5, "*circulating glucose*", which can be verified by calling queryPhen$where[5] and to confirm this is the last filled index, queryPhen$where[6] can be called to confirm this. We are not concerned about "*circulating glucose*"  therefore this will be overwritten by 'prenatal lethality', the phenotype of interest. This can be verified by inspecting queryPhen$where[5].
 ```R
 queryPhen$where = setConstraints(
   modifyQueryConstraints = queryPhen,
   m.index = 5,
-  values = list("perinatal lethality")
+  values = list("prenatal lethality")
 )
 resPhen1<-runQuery(im,queryPhen) ## runs query
 ```
-Alternative constraints can be added. The above example 'perinatal lethality' was identified by viewing the phenotype tree at http://www.informatics.jax.org/vocab/mp_ontology/ 
+Alternative constraints can be added. The above example 'prenatal lethality' was identified by viewing the phenotype tree at http://www.informatics.jax.org/vocab/mp_ontology/ 
 
 Additional terms can be added to the search by filling in the next index i.e. 6 in this case. 
-Below, a constraint on zygosity was made by preparing a new constraint, inserting this into 6th index. This will now return perinatal lethality when homozygous "hm". If heterozygous was desired, "ht" could be used. 
+Below, a constraint on zygosity was made by preparing a new constraint, inserting this into 6th index. This will now return prenatal lethality when homozygous "hm". If heterozygous was desired, "ht" could be used. 
 This newConstraint was added to the 6th index, and runQuery which will return 
 ```R
 newConstraint<-list(

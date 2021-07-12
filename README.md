@@ -38,7 +38,7 @@ queryPhen$where = setConstraints(
 )
 resPhen1<-runQuery(im,queryPhen) ## runs query
 ```
-Alternative constraints can be added. The example above ```"prenatal lethality"``` was identified by viewing the phenotype tree at http://www.informatics.jax.org/vocab/mp_ontology/ 
+Alternative phenotype than ```prenatal lethality``` can be used. The example above ```"prenatal lethality"``` was identified by viewing the phenotype tree at http://www.informatics.jax.org/vocab/mp_ontology/ 
 
 Additional constraints can be prepared and included in the search by populating the next index i.e. 6 in this case. 
 Below, a constraint on zygosity was made by preparing a new constraint, and inserting this into 6th index. This will return prenatal lethality when homozygous "hm". If heterozygous was desired, "ht" could be used. 

@@ -1,5 +1,5 @@
 # MouseMine-search-R-
-To query the MouseMine for mouse genes associated with phenotype ```prenatal lethality``` by adding constraints to the query. This method used ```R``` library ```InterMineR```.
+To query the MouseMine for mouse genes associated with phenotype ```prenatal lethality``` by adding constraints to the query. This method used ```R``` library ```InterMineR```. Alternative model organisms can be selected, available mines can be found via searching the below mentioned ```listMines()```.
 
 Load intermine and list all available mines.
 ```R

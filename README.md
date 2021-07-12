@@ -6,7 +6,7 @@ Load intermine and list all available mines.
 library(InterMineR)
 listMines()
 ```
-Mouse mine was selected here. Alternative model organisms can be selected via searching the above mentioned ```listMines()```.
+Mouse mine was selected here. Alternative model organisms can be selected, available mines can be found via searching the above mentioned ```listMines()```.
 ```R
 im<-initInterMine(mine = listMines()["MouseMine"])
 ```

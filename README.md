@@ -1,5 +1,5 @@
 # MGI-search-R-
-To query the MouseMine for mouse genes associated with phenotype ```prenatal lethality``` by adding constraints to the query.
+To query the MouseMine for mouse genes associated with phenotype ```prenatal lethality``` by adding constraints to the query. This method is using ```R``` library ```InterMineR```.
 
 Load intermine and list all available mines.
 ```R

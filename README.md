@@ -1,14 +1,12 @@
 # MGI-search-R-
-To query MouseMine for mouse genes associated with phenotype ```prenatal lethality```  and add constraints
+To query the MouseMine for mouse genes associated with phenotype ```prenatal lethality``` by adding constraints to the query.
 
-
-Load intermine and list mines.
-
+Load intermine and list all available mines.
 ```R
 library(InterMineR)
 listMines()
 ```
-Mouse mine will be selected here. Alternative model organisms can be selected via searching listMines().
+Mouse mine was selected here. Alternative model organisms can be selected via searching the above mentioned ```listMines()```.
 ```R
 im<-initInterMine(mine = listMines()["MouseMine"])
 ```

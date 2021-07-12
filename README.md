@@ -1,5 +1,5 @@
 # MGI-search-R-
-To query MouseMine and add constraints
+To query MouseMine for  and add constraints
 
 
 Load intermine and list mines.

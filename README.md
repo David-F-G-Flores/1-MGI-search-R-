@@ -28,7 +28,7 @@ To run the prepared query.
 ```R
 resPhen<-runQuery(im,queryPhen) ## runs query
 ```
-To add a constraint, arguments will be set in ```setConstraints``` in ```m.index 5```.
+To add a constraint, arguments will be set in ```setConstraints``` in ```m.index 5```. 
 ```resPhen``` from above had a default constraint in index 5, "*circulating glucose*", which can be verified by calling queryPhen$where[5] and to confirm this is the last populated index, queryPhen$where[6] can be called, this can be used for more complex queries. We are not concerned with "*circulating glucose*"  therefore this was be populated with ```"prenatal lethality"```, the phenotype of interest. This can be verified by inspecting queryPhen$where[5].
 ```R
 queryPhen$where = setConstraints(
